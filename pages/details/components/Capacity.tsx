@@ -1,0 +1,26 @@
+import {View, Text} from 'react-native';
+import React from 'react';
+import {t} from 'react-native-tailwindcss';
+import Animated from 'react-native-reanimated';
+const Capacity = () => {
+  return (
+    <Animated.View style={[t.mT4]}>
+      <Text style={[t.fontBold, t.textLg]}>Capacity</Text>
+      <View style={[t.mT2, t.bgGray200, t.p4, t.roundedLg]}>
+        <Text style={[t.fontLight]}>Capacity data</Text>
+        <View
+          style={[t.flex, t.flexRow, t.justifyBetween, t.itemsCenter, t.mT2]}>
+          <Text>Estimated debt</Text>
+          <Text style={[t.fontBold]}>$ 1,200</Text>
+        </View>
+        <View
+          style={[t.flex, t.flexRow, t.justifyBetween, t.itemsCenter, t.mT1]}>
+          <Text>Estimated debt</Text>
+          <Text style={[t.fontBold]}>$ 1,200</Text>
+        </View>
+      </View>
+    </Animated.View>
+  );
+};
+
+export default Capacity;
