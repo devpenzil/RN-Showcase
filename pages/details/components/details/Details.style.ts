@@ -1,57 +1,51 @@
 import {StyleSheet} from 'react-native';
 export const style = StyleSheet.create({
   container: {
+    width: '100%',
     marginTop: 20,
-  },
-  cardView: {
     display: 'flex',
     flexDirection: 'row',
-    width: '100%',
+    // justifyContent: 'space-between',
   },
   card: {
-    borderRadius: 14,
-    paddingVertical: 15,
-    backgroundColor: 'white',
-    display: 'flex',
-    alignItems: 'center',
+    paddingVertical: 20,
+    paddingHorizontal: 10,
+    borderRadius: 8,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 12,
+      height: 11,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 16.0,
 
-    elevation: 24,
+    shadowRadius: 20,
+    elevation: 22,
+    backgroundColor: 'white',
   },
-  cardHead: {
-    fontSize: 14,
-    marginTop: 6,
+  cardHeader: {
     textAlign: 'center',
-    fontWeight: '800',
+    fontSize: 16,
+    fontWeight: '900',
   },
-  cardPercent: {
-    fontSize: 20,
+  cardValue: {
     textAlign: 'center',
-    fontWeight: '800',
+    fontSize: 22,
+    fontWeight: '900',
+  },
+  cardHeaderComp: {
+    display: 'flex',
   },
   measure: {
-    width: '80%',
-    height: 30,
-    borderRadius: 10,
-    marginTop: 20,
+    width: '100%',
+    height: 25,
+    marginTop: 30,
     display: 'flex',
     flexDirection: 'row',
   },
   measureBlock: {
     width: '20%',
-    backgroundColor: '#f0f0f0',
-    height: '100%',
-    overflow: 'hidden',
-    borderRightColor: 'white',
-    borderRightWidth: 1,
-  },
-  active: {
+    height: 30,
     backgroundColor: 'green',
+    borderColor: 'white',
+    borderWidth: 1,
   },
 });

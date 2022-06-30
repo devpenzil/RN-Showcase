@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import {t} from 'react-native-tailwindcss';
-import Animated from 'react-native-reanimated';
+import Animated, {FadeIn} from 'react-native-reanimated';
 const Capacity = () => {
   return (
-    <Animated.View style={[t.mT4]}>
+    <Animated.View style={[t.mT4]} entering={FadeIn}>
       <Text style={[t.fontBold, t.textLg]}>Capacity</Text>
       <View style={[t.mT2, t.bgGray200, t.p4, t.roundedLg]}>
         <Text style={[t.fontLight]}>Capacity data</Text>
