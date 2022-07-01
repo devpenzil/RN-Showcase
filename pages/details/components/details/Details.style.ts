@@ -23,7 +23,6 @@ export const style = StyleSheet.create({
   },
   cardHeader: {
     textAlign: 'center',
-    fontSize: 16,
     fontWeight: '900',
   },
   cardValue: {
@@ -32,7 +31,7 @@ export const style = StyleSheet.create({
     fontWeight: '900',
   },
   cardHeaderComp: {
-    display: 'flex',
+    // display: 'flex',
   },
   measure: {
     width: '100%',
@@ -47,5 +46,22 @@ export const style = StyleSheet.create({
     backgroundColor: 'green',
     borderColor: 'white',
     borderWidth: 1,
+  },
+  unveriifiedBox: {
+    backgroundColor: 'orange',
+    borderRadius: 4,
+  },
+  unverifiedText: {
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: '700',
+  },
+  frontBlock: {
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+  },
+  backBlock: {
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
   },
 });
