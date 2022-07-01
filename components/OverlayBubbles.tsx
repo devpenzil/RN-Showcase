@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import {View, StyleSheet} from 'react-native';
 import React from 'react';
 import Animated, {useAnimatedStyle, withSpring} from 'react-native-reanimated';
@@ -9,7 +8,7 @@ interface props {
 
 const OverlayBubbles = ({children, animeCat}: props) => {
   const styleCordinates = [
-    {s1top: 100, s2top: 400, s3top: 60, s1left: 20, s2left: 300, s3left: 200},
+    {s1top: 350, s2top: 400, s3top: 100, s1left: 10, s2left: 330, s3left: 200},
     {s1top: 180, s2top: 60, s3top: 230, s1left: 4, s2left: 260, s3left: 360},
     {s1top: 200, s2top: 150, s3top: 450, s1left: 300, s2left: 280, s3left: 200},
     {s1top: 100, s2top: 250, s3top: 350, s1left: 200, s2left: 140, s3left: 290},

@@ -7,7 +7,6 @@ interface props {
 }
 const HeaderwithBack = ({goBack}: props) => {
   const back = () => {
-    console.log('back => ');
     goBack();
   };
   return (

@@ -9,7 +9,6 @@ const useDetailsPage = ({detailedView}: {detailedView: boolean}) => {
     const x = detailedView;
     return x;
   });
-  console.log({isOpen});
 
   const animateCard = useAnimatedStyle(() => {
     return {
@@ -17,6 +16,7 @@ const useDetailsPage = ({detailedView}: {detailedView: boolean}) => {
         duration: 500,
       }),
       shadowOpacity: isOpen.value ? 0 : 0.1,
+      backgroundColor: isOpen.value ? 'transparent' : 'white',
     };
   });
   const animatedDebtText = useAnimatedStyle(() => {
@@ -31,9 +31,7 @@ const useDetailsPage = ({detailedView}: {detailedView: boolean}) => {
   const animateCardHeaderComp = useAnimatedStyle(() => {
     return {
       display: 'flex',
-      flexDirection: withTiming(isOpen.value ? 'row-reverse' : 'column', {
-        duration: 500,
-      }),
+      flexDirection: 'row-reverse',
       justifyContent: 'space-between',
     };
   });
