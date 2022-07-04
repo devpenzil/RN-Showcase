@@ -7,7 +7,7 @@ import MainSection from './components/mainsection/MainSection';
 const Splash = () => {
   return (
     <SafeAreaView>
-      <View style={style.areaforAnim} />
+      {/* <View style={style.areaforAnim} /> */}
       <View style={style.container}>
         <MainSection />
         <Buttons />

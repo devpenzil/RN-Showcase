@@ -24,9 +24,8 @@ export const style = StyleSheet.create({
     lineHeight: 28,
   },
   greenScreen: {
-    height: 20,
-    width: 60,
-    backgroundColor: '#00ff00',
+    backgroundColor: 'green',
     position: 'absolute',
+    borderRadius: 2,
   },
 });
