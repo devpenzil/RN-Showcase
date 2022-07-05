@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View, Image} from 'react-native';
 import React from 'react';
 import {styles} from './ModalComp.style';
 import Animated, {FadeIn, BounceInUp, FadeOut} from 'react-native-reanimated';
@@ -14,8 +14,15 @@ interface modalIntreface {
     buttonColor: string;
     borderColor?: string;
   }[];
+  image?: any;
 }
-const ModalComp = ({isOpen, content, heading, buttons}: modalIntreface) => {
+const ModalComp = ({
+  isOpen,
+  content,
+  heading,
+  buttons,
+  image,
+}: modalIntreface) => {
   return (
     <>
       {isOpen && (
@@ -24,6 +31,7 @@ const ModalComp = ({isOpen, content, heading, buttons}: modalIntreface) => {
           entering={FadeIn}
           exiting={FadeOut}>
           <Animated.View style={styles.card} entering={BounceInUp}>
+            {image && <Image source={image} style={styles.image} />}
             <Text style={styles.heading}>{heading}</Text>
             <Text style={styles.content}>{content}</Text>
             <View style={styles.buttonGroup}>
@@ -54,7 +62,6 @@ const ModalComp = ({isOpen, content, heading, buttons}: modalIntreface) => {
                       backgroundColor: buttons[1].buttonColor,
                       borderColor:
                         buttons[1].borderColor || buttons[1].buttonColor,
-                      width: buttons[1] === undefined ? '80%' : '45%',
                     },
                   ]}>
                   <Text

@@ -16,6 +16,7 @@ const ModalDemo = () => {
         />
       </SafeAreaView>
       <ModalComp
+        image={require('../../assets/info.png')}
         isOpen={modalOpen}
         buttons={[
           {
