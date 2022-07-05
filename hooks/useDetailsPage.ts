@@ -31,7 +31,7 @@ const useDetailsPage = ({detailedView}: {detailedView: boolean}) => {
   const animateCardHeaderComp = useAnimatedStyle(() => {
     return {
       display: 'flex',
-      flexDirection: 'row-reverse',
+      flexDirection: isOpen.value ? 'row-reverse' : 'column',
       justifyContent: 'space-between',
     };
   });

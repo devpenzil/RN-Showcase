@@ -1,6 +1,6 @@
 import {View, StyleSheet} from 'react-native';
 import React from 'react';
-import Animated, {useAnimatedStyle, withSpring} from 'react-native-reanimated';
+import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
 interface props {
   animeCat: 1 | 2 | 3 | 4;
   children: any;
@@ -15,20 +15,28 @@ const OverlayBubbles = ({children, animeCat}: props) => {
   ];
   const s1 = useAnimatedStyle(() => {
     return {
-      top: withSpring(styleCordinates[animeCat - 1].s1top),
-      left: withSpring(styleCordinates[animeCat - 1].s1left),
+      top: withTiming(styleCordinates[animeCat - 1].s1top, {
+        duration: 500,
+      }),
+      left: withTiming(styleCordinates[animeCat - 1].s1left, {
+        duration: 500,
+      }),
     };
   });
   const s2 = useAnimatedStyle(() => {
     return {
-      top: withSpring(styleCordinates[animeCat - 1].s2top),
-      left: withSpring(styleCordinates[animeCat - 1].s2left),
+      top: withTiming(styleCordinates[animeCat - 1].s2top, {
+        duration: 500,
+      }),
+      left: withTiming(styleCordinates[animeCat - 1].s2left, {
+        duration: 500,
+      }),
     };
   });
   const s3 = useAnimatedStyle(() => {
     return {
-      top: withSpring(styleCordinates[animeCat - 1].s3top),
-      left: withSpring(styleCordinates[animeCat - 1].s3left),
+      top: withTiming(styleCordinates[animeCat - 1].s3top),
+      left: withTiming(styleCordinates[animeCat - 1].s3left),
     };
   });
   return (
