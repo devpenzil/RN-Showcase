@@ -9,9 +9,16 @@ import {routes} from './types/pageEnums';
 import ModalDemo from './pages/modalDemo/ModalDemo';
 import {Provider as PageProvider} from 'react-native-paper';
 import CustomFont from './pages/customFont/CustomFont';
+import Touch from './pages/touch/Touch';
+import Storage from './pages/storage/Storage';
+import {initializeMMKVFlipper} from 'react-native-mmkv-flipper-plugin';
+import {storage} from './storage/mmkvStorage';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  if (__DEV__) {
+    initializeMMKVFlipper({default: storage});
+  }
   return (
     <>
       <PageProvider>
@@ -25,6 +32,8 @@ const App = () => {
             <Stack.Screen name={routes.SPLASH} component={Splash} />
             <Stack.Screen name={routes.MODALDEMO} component={ModalDemo} />
             <Stack.Screen name={routes.CUSTOMFONT} component={CustomFont} />
+            <Stack.Screen name={routes.TOUCH} component={Touch} />
+            <Stack.Screen name={routes.STORAGE} component={Storage} />
           </Stack.Navigator>
         </NavigationContainer>
       </PageProvider>

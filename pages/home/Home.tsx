@@ -19,6 +19,8 @@ const Home = () => {
     {name: routes.SPLASH},
     {name: routes.MODALDEMO},
     {name: routes.CUSTOMFONT},
+    {name: routes.TOUCH},
+    {name: routes.STORAGE},
   ];
   return (
     <SafeAreaView>

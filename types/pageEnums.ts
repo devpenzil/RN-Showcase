@@ -5,4 +5,6 @@ export enum routes {
   SPLASH = 'splash',
   MODALDEMO = 'modaldemo',
   CUSTOMFONT = 'customfont',
+  TOUCH = 'touch',
+  STORAGE = 'storage',
 }
