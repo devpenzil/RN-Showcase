@@ -18,6 +18,7 @@ const Home = () => {
     {name: routes.LOTTIE},
     {name: routes.SPLASH},
     {name: routes.MODALDEMO},
+    {name: routes.CUSTOMFONT},
   ];
   return (
     <SafeAreaView>
@@ -25,7 +26,6 @@ const Home = () => {
         style={styles.container}
         data={data}
         renderItem={({item}: {item: RouteInterface}) => {
-          console.log(typeof item);
           return (
             <TouchableOpacity
               style={styles.touchableHandle}

@@ -4,4 +4,5 @@ export enum routes {
   LOTTIE = 'lottie',
   SPLASH = 'splash',
   MODALDEMO = 'modaldemo',
+  CUSTOMFONT = 'customfont',
 }

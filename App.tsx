@@ -8,6 +8,7 @@ import Home from './pages/home/Home';
 import {routes} from './types/pageEnums';
 import ModalDemo from './pages/modalDemo/ModalDemo';
 import {Provider as PageProvider} from 'react-native-paper';
+import CustomFont from './pages/customFont/CustomFont';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
             <Stack.Screen name={routes.LOTTIE} component={LottiePage} />
             <Stack.Screen name={routes.SPLASH} component={Splash} />
             <Stack.Screen name={routes.MODALDEMO} component={ModalDemo} />
+            <Stack.Screen name={routes.CUSTOMFONT} component={CustomFont} />
           </Stack.Navigator>
         </NavigationContainer>
       </PageProvider>

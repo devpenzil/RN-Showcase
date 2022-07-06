@@ -38,7 +38,6 @@ const MainSection = () => {
       'worklet';
       charecteRef();
       if (charecteRef) {
-        console.log('Measures =>', measure(charecteRef));
         position.value = {
           top: measure(charecteRef).y + 5,
           left: measure(charecteRef).x,
@@ -55,7 +54,6 @@ const MainSection = () => {
       'worklet';
       capacityRef();
       if (capacityRef) {
-        console.log('Measures =>', measure(capacityRef));
         position.value = {
           top: measure(capacityRef).y + 5,
           left: measure(capacityRef).x,
@@ -72,7 +70,6 @@ const MainSection = () => {
       'worklet';
       capitalRef();
       if (capitalRef) {
-        console.log('Measures =>', measure(capitalRef));
         position.value = {
           top: measure(capitalRef).y - 50,
           left: measure(capitalRef).x,
