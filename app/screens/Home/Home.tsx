@@ -55,7 +55,7 @@ const Home = () => {
               <Animated.View
                 style={(style.cardArea, {transform: [{scale}], opacity})}>
                 <Pressable style={style.card}>
-                  <Text>hello</Text>
+                  <Text>Hello world</Text>
                 </Pressable>
               </Animated.View>
             </>
