@@ -1,8 +1,6 @@
 import {
   Text,
   SafeAreaView,
-  FlatList,
-  View,
   StyleSheet,
   Pressable,
   Image,
@@ -10,14 +8,17 @@ import {
 } from 'react-native';
 import Animated from 'react-native-reanimated';
 import React from 'react';
+import {ROUTEENUM} from '../../types/routes';
+import {useNavigation} from '@react-navigation/native';
 
 const BG_IMG =
   'https://images.unsplash.com/photo-1621193677201-096db5e45734?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZsdWlkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60';
 
 const ITEM_SIZE = 80;
 const Home = () => {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  const data = [{name: 'Chart with Values', route: ROUTEENUM.CHARTWITHVALUES}];
   const scrollY = React.useRef(new Animated.Value()).current;
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView>
@@ -54,8 +55,12 @@ const Home = () => {
             <>
               <Animated.View
                 style={(style.cardArea, {transform: [{scale}], opacity})}>
-                <Pressable style={style.card}>
-                  <Text>Hello world</Text>
+                <Pressable
+                  style={style.card}
+                  onPress={() => {
+                    navigation.navigate(item.route);
+                  }}>
+                  <Text>{item.name}</Text>
                 </Pressable>
               </Animated.View>
             </>
