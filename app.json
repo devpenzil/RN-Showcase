@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "RN-Showcase",
-    "slug": "RN-Showcase",
+    "slug": "rn-showcase",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -31,6 +31,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9738d37f-ca0b-4300-bf66-4712b78964a4"
+      }
+    },
+    "owner": "devpenzil"
   }
 }
